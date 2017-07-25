@@ -1,0 +1,4 @@
+%{"bootleg": {:hex, :bootleg, "0.1.0", "97b14310416fa8b606c6b716bc640d0d0aab2f4d0fb5833e5907a1aa8d522c8e", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, repo: "hexpm", optional: false]}, {:ssh_client_key_api, "0.0.1", [hex: :ssh_client_key_api, repo: "hexpm", optional: false]}, {:sshkit, "0.0.3", [hex: :sshkit, repo: "hexpm", optional: false]}], "hexpm"},
+  "bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [:mix], [], "hexpm"},
+  "ssh_client_key_api": {:hex, :ssh_client_key_api, "0.0.1", "521076c1c468275b351cb2c28dd185ba76a07afff7706805add1e0892f0b64a9", [:mix], [], "hexpm"},
+  "sshkit": {:hex, :sshkit, "0.0.3", "b0d7c3e0a5caed69304ccbc1c97ab0b1fe82a26f0d21ba2a26b52868f834ab5a", [:mix], [], "hexpm"}}
