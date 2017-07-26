@@ -1,4 +1,4 @@
-# Bootle-Phoenix
+# Bootleg-Phoenix
 
 Provides `phoenix`-specific `bootleg` tasks.
 
