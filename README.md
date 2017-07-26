@@ -1,5 +1,7 @@
 # Bootleg-Phoenix
 
+[![CircleCI](https://img.shields.io/circleci/project/github/labzero/bootleg_phoenix/master.svg)](https://circleci.com/gh/labzero/bootleg_phoenix)
+
 Provides `phoenix`-specific `bootleg` tasks.
 
 ## Installation

@@ -1,4 +1,5 @@
 defmodule Bootleg.Tasks.PhoenixDigest do
+  @moduledoc "Installs needed depedencies and calls `mix phoenix.digest`."
   alias Bootleg.UI
 
   use Bootleg.Task do

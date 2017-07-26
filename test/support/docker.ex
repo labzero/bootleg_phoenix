@@ -2,6 +2,7 @@ defmodule Docker do
   @moduledoc false
 
   defmodule Error do
+    @moduledoc false
     defexception [:command, :args, :status, :output]
 
     def message(%{command: command, args: args, status: status, output: output}) do
