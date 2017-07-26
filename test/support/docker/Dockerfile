@@ -28,9 +28,7 @@ RUN echo "%passwordless-sudoers ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers.d/y
 
 # Add fixture data for tests
 ADD fixtures /fixtures
-RUN chmod -R a+x /fixtures/bin
-RUN printf 'export PATH=$PATH:/fixtures/bin\n' >> /etc/profile
-RUN printf "PATH=$PATH:/fixtures/bin\nBOOTLEG_PHOENIX_PATH=/project\nBOOTLEG_PATH=/project/deps/bootleg\n" > /etc/skel/.ssh/environment
+RUN printf "PATH=$PATH\nBOOTLEG_PHOENIX_PATH=/project\nBOOTLEG_PATH=/project/deps/bootleg\n" > /etc/skel/.ssh/environment
 
 # Run SSH daemon and expose the standard SSH port.
 EXPOSE 22
