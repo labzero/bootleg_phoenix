@@ -35,9 +35,8 @@ defmodule BootlegPhoenix.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    # [{:bootleg, "~> 0.1.0", runtime: false}]
     [
-      {:bootleg, git: "https://github.com/labzero/bootleg.git", tag: "master"},
+      {:bootleg, "~> 0.2.0", runtime: false},
       {:credo, "~> 0.7", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},

@@ -1,4 +1,4 @@
-%{"bootleg": {:git, "https://github.com/labzero/bootleg.git", "765579f7c400692dcf7a4fef8865cb23566d33f5", [tag: "master"]},
+%{"bootleg": {:hex, :bootleg, "0.2.0", "e75852fec7712b90106b18be37665064dff28490acefbcd8340762e861e0f577", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, repo: "hexpm", optional: false]}, {:ssh_client_key_api, "0.0.1", [hex: :ssh_client_key_api, repo: "hexpm", optional: false]}, {:sshkit, "0.0.3", [hex: :sshkit, repo: "hexpm", optional: false]}], "hexpm"},
   "bunt": {:hex, :bunt, "0.2.0", "951c6e801e8b1d2cbe58ebbd3e616a869061ddadcc4863d0a2182541acae9a38", [:mix], [], "hexpm"},
   "certifi": {:hex, :certifi, "1.2.1", "c3904f192bd5284e5b13f20db3ceac9626e14eeacfbb492e19583cf0e37b22be", [:rebar3], [], "hexpm"},
   "credo": {:hex, :credo, "0.8.4", "4e50acac058cf6292d6066e5b0d03da5e1483702e1ccde39abba385c9f03ead4", [:mix], [{:bunt, "~> 0.2.0", [hex: :bunt, repo: "hexpm", optional: false]}], "hexpm"},
