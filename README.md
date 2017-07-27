@@ -46,4 +46,4 @@ Check the [LICENSE](LICENSE) file for more information.
   [issues]: https://github.com/labzero/bootleg_phoenix/issues
   [pulls]: https://github.com/labzero/bootleg_phoenix/pulls
   [writing-docs]: http://elixir-lang.org/docs/stable/elixir/writing-documentation.html
-  [bootleg]: https://github.com/labzero/bootleg_phoenix
+  [bootleg]: https://github.com/labzero/bootleg
