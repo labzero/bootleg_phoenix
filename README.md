@@ -2,14 +2,10 @@
 
 [![CircleCI](https://img.shields.io/circleci/project/github/labzero/bootleg_phoenix/master.svg)](https://circleci.com/gh/labzero/bootleg_phoenix)
 
-Provides Phoenix-specific Bootleg tasks.
+Provides Phoenix-specific [Bootleg][bootleg] tasks.
 
-## Tasks
-
-### `phoenix_digest`
-
-This task makes sure your NPM dependencies are up-to-date and `brunch` is available, then does a
-`mix phoenix.digest` after the Bootleg `compile` task completes.
+These tasks are automatically wired up to the appropriate build steps in Bootleg, making deployment
+of Phoenix apps via Bootleg as smooth as a wheated whiskey.
 
 ## Installation
 
@@ -17,13 +13,20 @@ The package can be installed by adding `bootleg_phoenix` to your list of depende
 
 ```elixir
 def deps do
-  [{:bootleg_phoenix, "~> 0.1.0"}]
+  [{:distillery, "~> 1.3"},
+  {:bootleg, "~> 0.2.0"},
+  {:bootleg_phoenix, "~> 0.1.0"}]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/bootleg_phoenix](https://hexdocs.pm/bootleg_phoenix).
+## Tasks
+
+This package provides the following tasks to your project's bootleg environment.
+
+### `phoenix_digest`
+
+This task makes sure your NPM dependencies are up-to-date and `brunch` is available, then does a
+`mix phoenix.digest` after the Bootleg `compile` task completes.
 
 ## Contributing
 
@@ -43,3 +46,4 @@ Check the [LICENSE](LICENSE) file for more information.
   [issues]: https://github.com/labzero/bootleg_phoenix/issues
   [pulls]: https://github.com/labzero/bootleg_phoenix/pulls
   [writing-docs]: http://elixir-lang.org/docs/stable/elixir/writing-documentation.html
+  [bootleg]: https://github.com/labzero/bootleg_phoenix
