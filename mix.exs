@@ -2,6 +2,7 @@ defmodule BootlegPhoenix.Mixfile do
   use Mix.Project
 
   @version "0.1.0"
+  @source "https://github.com/labzero/bootleg_phoenix"
 
   def project do
     [app: :bootleg_phoenix,
@@ -13,7 +14,9 @@ defmodule BootlegPhoenix.Mixfile do
      elixirc_paths: elixirc_paths(Mix.env),
      docs: [source_ref: "v#{@version}", main: "readme", extras: ["README.md"]],
      test_coverage: [tool: ExCoveralls],
-     dialyzer: [plt_add_deps: :transitive, plt_add_apps: [:mix, :sshkit]]
+     dialyzer: [plt_add_deps: :transitive, plt_add_apps: [:mix, :sshkit]],
+     package: package(),
+     description: description(),
    ]
   end
 
@@ -45,6 +48,19 @@ defmodule BootlegPhoenix.Mixfile do
       {:junit_formatter, "~> 1.3", only: :test},
       {:temp, "~> 0.4.3", only: :test}
     ]
+  end
+
+  defp description do
+    "Provides Phoenix-specific Bootleg tasks."
+  end
+
+  defp package do
+    [maintainers: ["labzero", "Brien Wankel", "Ned Holets", "Rob Adams"],
+     licenses: ["MIT"],
+     links: %{
+      "GitHub" => @source,
+      "Bootleg" => "https://github.com/labzero/bootleg"
+    }]
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
