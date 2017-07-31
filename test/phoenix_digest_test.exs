@@ -3,10 +3,12 @@ defmodule BootlegPhoenix.PhoenixDigestTest do
   use BootlegPhoenix.FunctionalCase
 
   setup do
-    %{app_location: Fixtures.inflate_project(:drunkin_phoenix)}
+    %{
+      app_location: Fixtures.inflate_project(:drunkin_phoenix)
+    }
   end
 
-  @tag boot: 2, timeout: 120_000
+  @tag boot: 2, timeout: 360_000
   test "phoenix_digest generates the digest during compile", %{app_location: location, hosts: hosts} do
     shell_env = [
       {"BOOTLEG_PHOENIX_PATH", File.cwd!},
@@ -14,6 +16,11 @@ defmodule BootlegPhoenix.PhoenixDigestTest do
     ]
     build_host = List.first(hosts)
     app_hosts = hosts -- [build_host]
+    build_id =
+      build_host
+      |> Map.get(:id)
+      |> String.slice(0, 12)
+    IO.puts "Build host is #{build_id}"
 
     File.open!(Path.join([location, "config", "deploy.exs"]), [:write], fn file ->
       IO.write(file, """
