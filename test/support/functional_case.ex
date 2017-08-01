@@ -26,7 +26,8 @@ defmodule BootlegPhoenix.FunctionalCase do
     hosts = Enum.map(1..count, fn _ -> init(boot(conf)) end)
 
     if Map.get(tags, :verbose, System.get_env("TEST_VERBOSE")) do
-      Logger.info("started docker hosts: #{inspect hosts, pretty: true}")
+      Logger.configure(level: :debug)
+      Logger.debug("started docker hosts: #{inspect hosts, pretty: true}")
     end
 
     unless Map.get(tags, :leave_vm, System.get_env("TEST_LEAVE_CONTAINER")) do
