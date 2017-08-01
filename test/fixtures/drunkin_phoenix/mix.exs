@@ -33,6 +33,7 @@ defmodule DrunkinPhoenix.Mixfile do
       {:phoenix_pubsub, "~> 1.0"},
       {:cowboy, "~> 1.0"},
       {:distillery, "~> 1.4", runtime: false},
+      {:bootleg, "~> 0.2.0", runtime: false, override: true},
       {:bootleg_phoenix, ">= 0.0.0", path: System.get_env("BOOTLEG_PHOENIX_PATH"), runtime: false}
     ]
   end
