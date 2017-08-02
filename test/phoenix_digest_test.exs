@@ -6,7 +6,7 @@ defmodule BootlegPhoenix.PhoenixDigestTest do
     %{app_location: Fixtures.inflate_project(:drunkin_phoenix)}
   end
 
-  @tag boot: 2, timeout: 120_000
+  @tag boot: 2, timeout: 180_000
   test "phoenix_digest generates the digest during compile", %{app_location: location, hosts: hosts} do
     shell_env = [
       {"BOOTLEG_PHOENIX_PATH", File.cwd!},
