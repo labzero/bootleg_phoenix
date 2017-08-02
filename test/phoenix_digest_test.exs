@@ -21,6 +21,10 @@ defmodule BootlegPhoenix.PhoenixDigestTest do
 
         role :build, "#{build_host.ip}", port: #{build_host.port}, user: "#{build_host.user}",
           silently_accept_hosts: true, workspace: "workspace", identity: "#{build_host.private_key_path}"
+
+        after_task :build do
+          remote :build, do: "[ -f priv/static/manifest.json ]"
+        end
       """)
       Enum.each(app_hosts, fn host ->
         IO.write(file, """
