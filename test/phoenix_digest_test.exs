@@ -6,7 +6,7 @@ defmodule BootlegPhoenix.PhoenixDigestTest do
     %{app_location: Fixtures.inflate_project(:drunkin_phoenix)}
   end
 
-  @tag boot: 2, timeout: 120_000
+  @tag boot: 2, timeout: 180_000
   test "phoenix_digest generates the digest during compile", %{app_location: location, hosts: hosts} do
     shell_env = [
       {"BOOTLEG_PHOENIX_PATH", File.cwd!},
@@ -21,6 +21,10 @@ defmodule BootlegPhoenix.PhoenixDigestTest do
 
         role :build, "#{build_host.ip}", port: #{build_host.port}, user: "#{build_host.user}",
           silently_accept_hosts: true, workspace: "workspace", identity: "#{build_host.private_key_path}"
+
+        after_task :build do
+          remote :build, do: "[ -f priv/static/manifest.json ]"
+        end
       """)
       Enum.each(app_hosts, fn host ->
         IO.write(file, """
