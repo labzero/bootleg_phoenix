@@ -5,8 +5,9 @@ defmodule BootlegPhoenix.FunctionalCase do
 
   import BootlegPhoenix.FunctionalCaseHelpers
   require Logger
+  alias BootlegPhoenix.Fixtures
 
-  @image "bootleg-test-sshd"
+  @image "bootleg-phoenix-test-sshd"
   @cmd "/usr/sbin/sshd"
   @args ["-D", "-e"]
 
@@ -33,7 +34,9 @@ defmodule BootlegPhoenix.FunctionalCase do
       on_exit fn -> kill(hosts) end
     end
 
-    {:ok, hosts: hosts}
+    location = Map.get(tags, :app_fixture, nil)
+
+    {:ok, hosts: hosts, app_location: Fixtures.inflate_project(location)}
   end
 
   def boot(%{image: image, cmd: cmd, args: args} = config) do

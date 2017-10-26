@@ -13,7 +13,7 @@ unless Docker.ready? do
   exit({:shutdown, 1})
 end
 
-Docker.build!("bootleg-test-sshd", "test/support/docker")
+Docker.build!("bootleg-phoenix-test-sshd", "test/support/docker")
 
 ExUnit.configure formatters: [JUnitFormatter, ExUnit.CLIFormatter]
 ExUnit.start()
