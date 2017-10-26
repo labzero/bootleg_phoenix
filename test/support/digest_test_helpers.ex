@@ -22,7 +22,7 @@ defmodule BootlegPhoenix.DigestTestHelpers do
               silently_accept_hosts: true, workspace: "workspace", identity: "#{build_host.private_key_path}"
 
             after_task :build do
-              remote :build, do: "[ -f priv/static/manifest.json ]"
+              remote :build, do: "ls -la priv/static && [ -f priv/static/manifest.json ] || [ -f priv/static/cache_manifest.json ]"
             end
           """)
           Enum.each(app_hosts, fn host ->
