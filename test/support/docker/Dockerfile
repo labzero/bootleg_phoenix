@@ -3,8 +3,10 @@ FROM bitwalker/alpine-elixir:latest
 # Set up an Alpine Linux machine running an SSH server.
 # Autogenerate missing host keys.
 
-RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories
-RUN apk add --update --no-cache openssh sudo perl-utils git nodejs-npm
+RUN sed -i '/http:\/\/nl.alpinelinux.org\/alpine\/edge\/main/d' /etc/apk/repositories
+RUN echo @edge http://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories
+RUN apk update
+RUN apk add --update --no-cache openssh sudo perl-utils git nodejs-npm bash
 RUN ssh-keygen -A
 RUN printf "PermitUserEnvironment yes\n" >> /etc/ssh/sshd_config
 

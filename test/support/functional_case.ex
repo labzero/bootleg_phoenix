@@ -7,7 +7,7 @@ defmodule BootlegPhoenix.FunctionalCase do
   require Logger
   alias BootlegPhoenix.Fixtures
 
-  @image "bootleg-test-sshd"
+  @image "bootleg-phoenix-test-sshd"
   @cmd "/usr/sbin/sshd"
   @args ["-D", "-e"]
 
