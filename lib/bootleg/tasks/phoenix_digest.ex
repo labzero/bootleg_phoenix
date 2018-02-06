@@ -11,7 +11,7 @@ defmodule Bootleg.Tasks.PhoenixDigest do
         "[ -f brunch-config.js ] && [ -d node_modules ] && ./node_modules/brunch/bin/brunch b -p || true"
         "[ -f assets/package.json ] && cd assets && npm install || true"
         "[ -f assets/brunch-config.js ] && cd assets && [ -d node_modules ] && ./node_modules/brunch/bin/brunch b -p || true"
-        "[ -d deps/phoenix ] && MIX_ENV=#{mix_env} mix phoenix.digest || true"
+        "[ -d deps/phoenix ] && MIX_ENV=#{mix_env} mix phx.digest || true"
       end
       UI.info "Phoenix asset digest generated"
     end
