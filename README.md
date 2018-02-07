@@ -14,7 +14,7 @@ The package can be installed by adding `bootleg_phoenix` to your list of depende
 ```elixir
 def deps do
   [{:distillery, "~> 1.5"},
-  {:bootleg, "~> 0.5"},
+  {:bootleg, "~> 0.7"},
   {:bootleg_phoenix, "~> 0.2"}]
 end
 ```
