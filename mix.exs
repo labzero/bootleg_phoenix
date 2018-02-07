@@ -39,12 +39,12 @@ defmodule BootlegPhoenix.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:bootleg, "~> 0.5", runtime: false},
+      {:bootleg, "~> 0.7", runtime: false},
       {:credo, "~> 0.7", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:excoveralls, "~> 0.6", only: :test},
-      {:mock, "~> 0.2.0", only: :test},
+      {:mock, "~> 0.3", only: :test},
       {:junit_formatter, "~> 2.0", only: :test},
       {:temp, "~> 0.4.3", only: :test}
     ]
