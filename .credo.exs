@@ -71,7 +71,6 @@
         # set this value to 0 (zero).
         {Credo.Check.Design.TagTODO, exit_status: 2},
         {Credo.Check.Design.TagFIXME},
-
         {Credo.Check.Readability.FunctionNames},
         {Credo.Check.Readability.LargeNumbers},
         {Credo.Check.Readability.MaxLineLength, priority: :low, max_length: 100},
@@ -83,13 +82,12 @@
         {Credo.Check.Readability.PredicateFunctionNames},
         {Credo.Check.Readability.PreferImplicitTry},
         {Credo.Check.Readability.RedundantBlankLines},
-        {Credo.Check.Readability.StringSigils},
+        {Credo.Check.Readability.StringSigils, false},
         {Credo.Check.Readability.TrailingBlankLine},
         {Credo.Check.Readability.TrailingWhiteSpace},
         {Credo.Check.Readability.VariableNames},
         {Credo.Check.Readability.Semicolons},
         {Credo.Check.Readability.SpaceAfterCommas},
-
         {Credo.Check.Refactor.DoubleBooleanNegation},
         {Credo.Check.Refactor.CondStatements},
         {Credo.Check.Refactor.CyclomaticComplexity},
@@ -100,7 +98,6 @@
         {Credo.Check.Refactor.Nesting},
         {Credo.Check.Refactor.PipeChainStart},
         {Credo.Check.Refactor.UnlessWithElse},
-
         {Credo.Check.Warning.BoolOperationOnSameValues},
         {Credo.Check.Warning.IExPry},
         {Credo.Check.Warning.IoInspect},
@@ -128,7 +125,7 @@
         {Credo.Check.Warning.NameRedeclarationByAssignment, false},
         {Credo.Check.Warning.NameRedeclarationByCase, false},
         {Credo.Check.Warning.NameRedeclarationByDef, false},
-        {Credo.Check.Warning.NameRedeclarationByFn, false},
+        {Credo.Check.Warning.NameRedeclarationByFn, false}
 
         # Custom checks can be created using `mix credo.gen.check`.
         #
