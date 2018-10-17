@@ -6,16 +6,22 @@ defmodule Bootleg.Tasks.PhoenixDigest do
       alias Bootleg.UI
 
       mix_env = Keyword.get(config(), :mix_env, "prod")
+
       remote :build do
         "[ -f package.json ] && npm install || true"
-        "[ -f brunch-config.js ] && [ -d node_modules ] && ./node_modules/brunch/bin/brunch b -p || true"
+
+        "[ -f package.json ] && npm build || true"
+
         "[ -f assets/package.json ] && cd assets && npm install || true"
-        "[ -f assets/brunch-config.js ] && cd assets && [ -d node_modules ] && ./node_modules/brunch/bin/brunch b -p || true"
+
+        "[ -f assets/package.json ] && cd assets && npm build || true"
+
         "[ -d deps/phoenix ] && MIX_ENV=#{mix_env} mix phoenix.digest || true"
       end
-      UI.info "Phoenix asset digest generated"
+
+      UI.info("Phoenix asset digest generated")
     end
 
-    after_task :compile, :phoenix_digest
+    after_task(:compile, :phoenix_digest)
   end
 end

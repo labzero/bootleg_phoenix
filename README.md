@@ -14,10 +14,13 @@ The package can be installed by adding `bootleg_phoenix` to your list of depende
 ```elixir
 def deps do
   [{:distillery, "~> 1.5"},
-  {:bootleg, "~> 0.5"},
+  {:bootleg, "~> 0.7"},
   {:bootleg_phoenix, "~> 0.2"}]
 end
 ```
+Open `package.json` and add the following to your `scripts` section:
+
+`"build": "webpack --mode production --progress --colors"`
 
 ## Tasks
 
@@ -25,7 +28,7 @@ This package provides the following tasks to your project's bootleg environment.
 
 ### `phoenix_digest`
 
-This task makes sure your NPM dependencies are up-to-date and `brunch` is available, then does a
+This task makes sure your NPM dependencies are up-to-date and `npm` can build your assets, then does a
 `mix phoenix.digest` after the Bootleg `compile` task completes.
 
 ## Contributing
