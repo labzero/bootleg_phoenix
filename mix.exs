@@ -45,7 +45,7 @@ defmodule BootlegPhoenix.Mixfile do
       {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.19", only: :dev, runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
-      {:mock, "~> 0.2.0", only: :test},
+      {:mock, "~> 0.3", only: :test},
       {:junit_formatter, "~> 2.2", only: :test},
       {:temp, "~> 0.4.7", only: :test}
     ]
