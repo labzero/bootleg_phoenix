@@ -41,12 +41,12 @@ defmodule BootlegPhoenix.Mixfile do
   defp deps do
     [
       {:bootleg, "~> 0.7.0", runtime: false},
-      {:credo, "~> 0.8", only: [:dev, :test]},
+      {:credo, "~> 0.10", only: [:dev, :test]},
       {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.19", only: :dev, runtime: false},
-      {:excoveralls, "~> 0.10", only: :test},
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.6", only: :test},
       {:mock, "~> 0.3", only: :test},
-      {:junit_formatter, "~> 2.2", only: :test},
+      {:junit_formatter, "~> 2.0", only: :test},
       {:temp, "~> 0.4.7", only: :test}
     ]
   end
