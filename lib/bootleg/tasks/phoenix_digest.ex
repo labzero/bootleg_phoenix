@@ -1,5 +1,5 @@
 defmodule Bootleg.Tasks.PhoenixDigest do
-  @moduledoc "Installs needed depedencies and calls `mix phoenix.digest`."
+  @moduledoc "Installs needed dependencies and calls `mix phoenix.digest`."
 
   use Bootleg.Task do
     task :phoenix_digest do
